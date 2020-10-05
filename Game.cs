@@ -6,28 +6,53 @@ namespace HelloWorld
 {
     class Game
     {
-        //Run the game
+        private bool _gameOver = false; //The game will end when set to true
+
+        ///Run the game
         public void Run()
         {
-            
+            //Initialize the game
+            Start();
+            //Loop until the game is over
+            while (!_gameOver)
+            {
+                //Step through the game logic
+                Update();
+                //Render the game to the screen
+                Draw();
+            }
+            //Shut down the game
+            End();
         }
 
-        //Performed once when the game begins
+        ///Initialize the game
         public void Start()
         {
             
         }
 
-        //Repeated until the game ends
+        ///Step through game logic
         public void Update()
         {
             
         }
 
-        //Performed once when the game ends
+        ///Render the game to the screen
+        public void Draw()
+        {
+
+        }
+
+        ///Shut down the game
         public void End()
         {
             
+        }
+
+        ///Set whether the game should end
+        public void SetGameOver(bool value)
+        {
+            _gameOver = value;
         }
     }
 }
