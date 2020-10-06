@@ -6,7 +6,7 @@ namespace HelloWorld
 {
     class Game
     {
-        private bool _gameOver = false; //The game will end when set to true
+        private static bool _gameOver = false; //The game will end when set to true
 
         ///Run the game
         public void Run()
@@ -50,7 +50,7 @@ namespace HelloWorld
         }
 
         ///Set whether the game should end
-        public void SetGameOver(bool value)
+        public static void SetGameOver(bool value)
         {
             _gameOver = value;
         }
